@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang - Sistem Manajemen Kontak</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header dengan Navigasi -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <i class="fas fa-address-book"></i>
+                <span>Kontak Manager</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="add-contact.html"><i class="fas fa-plus"></i> Tambah Kontak</a></li>
+                <li><a href="view-contacts.php"><i class="fas fa-list"></i> Lihat Kontak</a></li>
+                <li><a href="about.html" class="active"><i class="fas fa-info-circle"></i> Tentang</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Content -->
+    <div class="about-content">
+        <h1><i class="fas fa-info-circle"></i> Tentang Sistem Manajemen Kontak</h1>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem;">
+            <div>
+                <img src="images/1.avif" 
+                     alt="Sistem Manajemen Kontak" 
+                     style="width: 100%; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+                <h2>Aplikasi Web Modern untuk Mengelola Kontak</h2>
+                <p>Sistem Manajemen Kontak adalah solusi lengkap untuk mengorganisir dan mengelola informasi kontak Anda dengan mudah dan efisien. Aplikasi ini dikembangkan menggunakan teknologi web modern untuk memberikan pengalaman pengguna yang optimal.</p>
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <div style="background: #4CAF50; color: white; padding: 1rem; border-radius: 10px; text-align: center; flex: 1;">
+                        <i class="fas fa-users" style="font-size: 2rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong>Unlimited</strong><br>
+                        <small>Kontak</small>
+                    </div>
+                    <div style="background: #2196F3; color: white; padding: 1rem; border-radius: 10px; text-align: center; flex: 1;">
+                        <i class="fas fa-tags" style="font-size: 2rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong>5 Kategori</strong><br>
+                        <small>Klasifikasi</small>
+                    </div>
+                    <div style="background: #FF9800; color: white; padding: 1rem; border-radius: 10px; text-align: center; flex: 1;">
+                        <i class="fas fa-search" style="font-size: 2rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong>Smart</strong><br>
+                        <small>Search</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2><i class="fas fa-star"></i> Fitur Utama</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+            <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #4CAF50;">
+                <h3><i class="fas fa-user-plus"></i> Manajemen Kontak</h3>
+                <p>Tambah, edit, dan hapus kontak dengan informasi lengkap termasuk foto profil, alamat, tanggal lahir, dan catatan khusus.</p>
+            </div>
+            <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #2196F3;">
+                <h3><i class="fas fa-filter"></i> Filter & Kategori</h3>
+                <p>Organisir kontak berdasarkan kategori (Keluarga, Teman, Kerja, Bisnis) dan prioritas (Tinggi, Sedang, Rendah).</p>
+            </div>
+            <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #FF9800;">
+                <h3><i class="fas fa-search"></i> Pencarian Cerdas</h3>
+                <p>Temukan kontak dengan cepat menggunakan fitur pencarian yang dapat mencari berdasarkan nama, email, telepon, atau catatan.</p>
+            </div>
+            <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #9C27B0;">
+                <h3><i class="fas fa-chart-bar"></i> Statistik & Laporan</h3>
+                <p>Lihat statistik kontak, grafik distribusi kategori, dan informasi jumlah kontak yang ditambahkan setiap periode.</p>
+            </div>
+        </div>
+
+        <h2><i class="fas fa-code"></i> Teknologi yang Digunakan</h2>
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 15px; margin-bottom: 3rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                <div style="text-align: center;">
+                    <i class="fab fa-html5" style="font-size: 3rem; margin-bottom: 1rem; color: #E34F26;"></i>
+                    <h3>HTML5</h3>
+                    <p>Struktur markup semantik untuk tampilan yang terorganisir dan accessible.</p>
+                </div>
+                <div style="text-align: center;">
+                    <i class="fab fa-css3-alt" style="font-size: 3rem; margin-bottom: 1rem; color: #1572B6;"></i>
+                    <h3>CSS3</h3>
+                    <p>Styling modern dengan animasi, gradien, dan responsive design.</p>
+                </div>
+                <div style="text-align: center;">
+                    <i class="fab fa-js-square" style="font-size: 3rem; margin-bottom: 1rem; color: #F7DF1E;"></i>
+                    <h3>JavaScript</h3>
+                    <p>Interaktivitas dinamis, validasi form, dan pengalaman pengguna yang responsif.</p>
+                </div>
+                <div style="text-align: center;">
+                    <i class="fab fa-php" style="font-size: 3rem; margin-bottom: 1rem; color: #777BB4;"></i>
+                    <h3>PHP</h3>
+                    <p>Server-side processing untuk menyimpan dan mengelola data kontak dalam file text.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2><i class="fas fa-database"></i> Penyimpanan Data</h2>
+        <p>Aplikasi ini menggunakan sistem penyimpanan file text murni untuk menyimpan data kontak, sesuai dengan persyaratan proyek. Data disimpan dalam format berikut:</p>
+        
+        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin: 1rem 0; border-left: 4px solid #4CAF50;">
+            <ul style="margin: 0; padding-left: 1rem;">
+                <li><strong>Format JSON:</strong> Data kontak disimpan dalam format JSON untuk kemudahan parsing dan pembacaan</li>
+                <li><strong>Format CSV:</strong> Backup data dalam format CSV untuk kompatibilitas dengan aplikasi lain</li>
+                <li><strong>File Log:</strong> Pencatatan aktivitas dalam file log untuk tracking dan debugging</li>
+                <li><strong>Upload Foto:</strong> Foto profil disimpan dalam folder terpisah dengan nama file yang unik</li>
+            </ul>
+        </div>
+
+        <h2><i class="fas fa-mobile-alt"></i> Responsive Design</h2>
+        <p>Aplikasi ini dirancang dengan pendekatan <em>mobile-first</em> dan responsive design, memastikan tampilan yang optimal di berbagai perangkat:</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 2rem 0;">
+            <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 10px;">
+                <i class="fas fa-mobile-alt" style="font-size: 2rem; color: #4CAF50; margin-bottom: 0.5rem;"></i>
+                <h4>Mobile</h4>
+                <p style="font-size: 0.9rem; margin: 0;">Optimized untuk smartphone</p>
+            </div>
+            <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 10px;">
+                <i class="fas fa-tablet-alt" style="font-size: 2rem; color: #2196F3; margin-bottom: 0.5rem;"></i>
+                <h4>Tablet</h4>
+                <p style="font-size: 0.9rem; margin: 0;">Tampilan yang nyaman di tablet</p>
+            </div>
+            <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 10px;">
+                <i class="fas fa-desktop" style="font-size: 2rem; color: #FF9800; margin-bottom: 0.5rem;"></i>
+                <h4>Desktop</h4>
+                <p style="font-size: 0.9rem; margin: 0;">Layout penuh untuk desktop</p>
+            </div>
+        </div>
+
+        <h2><i class="fas fa-shield-alt"></i> Keamanan & Privasi</h2>
+        <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
+            <h4 style="color: #856404; margin-bottom: 1rem;"><i class="fas fa-exclamation-triangle"></i> Informasi Penting</h4>
+            <ul style="color: #856404; margin: 0; padding-left: 1rem;">
+                <li>Data kontak disimpan secara lokal di server</li>
+                <li>Validasi input untuk mencegah data yang tidak valid</li>
+                <li>Sanitasi data untuk mencegah injeksi kode berbahaya</li>
+                <li>File upload dengan validasi tipe dan ukuran file</li>
+                <li>Backup otomatis dalam format CSV</li>
+            </ul>
+        </div>
+
+        <h2><i class="fas fa-rocket"></i> Pengembangan Selanjutnya</h2>
+        <p>Beberapa fitur yang dapat dikembangkan di masa mendatang:</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0;">
+            <div style="background: #e3f2fd; padding: 1rem; border-radius: 10px; border-left: 4px solid #2196F3;">
+                <i class="fas fa-database"></i>
+                <strong>Database Integration</strong>
+                <p style="font-size: 0.9rem; margin: 0.5rem 0 0 0;">Migrasi ke database MySQL/PostgreSQL</p>
+            </div>
+            <div style="background: #f3e5f5; padding: 1rem; border-radius: 10px; border-left: 4px solid #9C27B0;">
+                <i class="fas fa-users"></i>
+                <strong>Multi-user</strong>
+                <p style="font-size: 0.9rem; margin: 0.5rem 0 0 0;">Support untuk multiple users dengan login</p>
+            </div>
+            <div style="background: #e8f5e8; padding: 1rem; border-radius: 10px; border-left: 4px solid #4CAF50;">
+                <i class="fas fa-sync"></i>
+                <strong>Sync Cloud</strong>
+                <p style="font-size: 0.9rem; margin: 0.5rem 0 0 0;">Sinkronisasi dengan cloud storage</p>
+            </div>
+            <div style="background: #fff3e0; padding: 1rem; border-radius: 10px; border-left: 4px solid #FF9800;">
+                <i class="fas fa-mobile-alt"></i>
+                <strong>Mobile App</strong>
+                <p style="font-size: 0.9rem; margin: 0.5rem 0 0 0;">Progressive Web App (PWA)</p>
+            </div>
+        </div>
+
+        <!-- Video Demo -->
+        <h2><i class="fas fa-play-circle"></i> Video Demo</h2>
+        <div style="text-align: center; margin: 2rem 0;">
+            <video controls style="max-width: 100%; height: 300px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                Browser Anda tidak mendukung video HTML5.
+            </video>
+            <p style="color: #666; margin-top: 1rem; font-style: italic;">Video demo penggunaan Sistem Manajemen Kontak</p>
+        </div>
+
+        <!-- Audio Info -->
+        <div style="background: #f8f9fa; padding: 2rem; border-radius: 15px; text-align: center; margin: 3rem 0;">
+            <h3><i class="fas fa-volume-up"></i> Audio Feedback</h3>
+            <p>Aplikasi ini dilengkapi dengan audio feedback untuk meningkatkan pengalaman pengguna:</p>
+            <audio controls style="margin: 1rem 0;">
+                <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+                Browser Anda tidak mendukung audio HTML5.
+            </audio>
+            <p style="color: #666; font-size: 0.9rem;">Suara notifikasi saat berhasil menyimpan kontak</p>
+        </div>
+
+        <!-- Developer Info -->
+        <div style="background: linear-gradient(135deg, #4CAF50, #45a049); color: white; padding: 2rem; border-radius: 15px; text-align: center; margin-top: 3rem;">
+            <h2><i class="fas fa-code"></i> Informasi Developer</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 1rem;">Aplikasi ini dikembangkan sebagai bagian dari pembelajaran pengembangan web</p>
+            
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
+                <div>
+                    <i class="fas fa-calendar-alt"></i>
+                    <strong>Tanggal:</strong> Juni 2025
+                </div>
+                <div>
+                    <i class="fas fa-code-branch"></i>
+                    <strong>Versi:</strong> 1.0.0
+                </div>
+                <div>
+                    <i class="fas fa-heart"></i>
+                    <strong>Dibuat dengan:</strong> ❤️ dan ☕
+                </div>
+            </div>
+            
+            <div style="margin-top: 2rem;">
+                <a href="index.html" class="btn btn-secondary" style="background: rgba(255,255,255,0.2); border: 2px solid white;">
+                    <i class="fas fa-home"></i> Kembali ke Beranda
+                </a>
+                <a href="add-contact.html" class="btn btn-secondary" style="background: rgba(255,255,255,0.2); border: 2px solid white; margin-left: 1rem;">
+                    <i class="fas fa-plus"></i> Mulai Menggunakan
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sistem Manajemen Kontak. Dibuat dengan <i class="fas fa-heart"></i> untuk kemudahan Anda.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
+                <i class="fas fa-globe"></i> Mendukung HTML5, CSS3, JavaScript ES6+, dan PHP 7.4+
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Counter animation untuk statistik
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate counters when they come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counters = entry.target.querySelectorAll('[data-count]');
+                        counters.forEach(counter => {
+                            const target = parseInt(counter.getAttribute('data-count'));
+                            animateCounter(counter, target);
+                        });
+                    }
+                });
+            });
+
+            // Add data-count attributes to elements that should be animated
+            document.querySelectorAll('.stat-card h3').forEach(el => {
+                const text = el.textContent;
+                const number = text.match(/\d+/);
+                if (number) {
+                    el.setAttribute('data-count', number[0]);
+                    observer.observe(el.parentElement);
+                }
+            });
+        });
+
+        // Easter egg - Konami Code
+        let konamiCode = [];
+        const konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]; // ↑↑↓↓←→←→BA
+
+        document.addEventListener('keydown', function(e) {
+            konamiCode.push(e.keyCode);
+            konamiCode = konamiCode.slice(-konamiSequence.length);
+            
+            if (konamiCode.join(',') === konamiSequence.join(',')) {
+                // Easter egg activated!
+                document.body.style.transform = 'rotate(360deg)';
+                document.body.style.transition = 'transform 2s ease';
+                showToast('🎉 Easter egg ditemukan! Selamat!', 'success');
+                
+                setTimeout(() => {
+                    document.body.style.transform = '';
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+</html>

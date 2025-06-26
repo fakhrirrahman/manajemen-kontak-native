@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Manajemen Kontak</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="no-animations">
+    <!-- Header dengan Navigasi -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <i class="fas fa-address-book"></i>
+                <span>Kontak Manager</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="add-contact.html"><i class="fas fa-plus"></i> Tambah Kontak</a></li>
+                <li><a href="view-contacts.php"><i class="fas fa-list"></i> Lihat Kontak</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> Tentang</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Selamat Datang di Sistem Manajemen Kontak</h1>
+            <p>Kelola kontak Anda dengan mudah dan efisien</p>
+            <div class="hero-buttons">
+                <a href="add-contact.html" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Tambah Kontak Baru
+                </a>
+                <a href="view-contacts.php" class="btn btn-secondary">
+                    <i class="fas fa-list"></i> Lihat Semua Kontak
+                </a>
+                <a href="test-center.html" class="btn" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white;">
+                    <i class="fas fa-vial"></i> Test Center
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/1.avif" alt="Contact Management">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Fitur Unggulan</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-user-plus"></i>
+                    <h3>Tambah Kontak</h3>
+                    <p>Tambahkan kontak baru dengan informasi lengkap seperti nama, email, telepon, dan kategori.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-search"></i>
+                    <h3>Cari & Filter</h3>
+                    <p>Temukan kontak dengan mudah menggunakan fitur pencarian dan filter berdasarkan kategori.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-edit"></i>
+                    <h3>Kelola Data</h3>
+                    <p>Edit dan hapus kontak sesuai kebutuhan dengan antarmuka yang user-friendly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audio Background -->
+    <audio autoplay loop muted>
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+        Browser Anda tidak mendukung audio.
+    </audio>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sistem Manajemen Kontak. Dibuat dengan <i class="fas fa-heart"></i> untuk kemudahan Anda.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script minimal untuk halaman index tanpa animasi
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hanya fungsi dasar tanpa animasi
+            console.log('Halaman index dimuat');
+        });
+    </script>
+</body>
+</html>

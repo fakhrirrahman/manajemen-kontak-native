@@ -1,0 +1,63 @@
+# .htaccess untuk Sistem Manajemen Kontak
+
+# Redirect ke index.html jika mengakses root
+DirectoryIndex index.html index.php
+
+# Proteksi direktori data
+<Files "data/*">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# Proteksi file sensitif
+<Files "*.log">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# Set MIME types untuk file multimedia
+AddType video/mp4 .mp4
+AddType audio/wav .wav
+AddType audio/mpeg .mp3
+
+# Enable compression untuk performa yang lebih baik
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+# Cache headers untuk file statis
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+</IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Upload file size limit (jika didukung server)
+php_value upload_max_filesize 5M
+php_value post_max_size 6M
+php_value memory_limit 128M
+
+# Error pages (opsional)
+ErrorDocument 404 /rafi/index.html
+ErrorDocument 500 /rafi/index.html

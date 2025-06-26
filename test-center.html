@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧪 Test Center - Verifikasi Penyimpanan Text Murni</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 2rem;
+        }
+        
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .test-card {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .test-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: #007bff;
+        }
+        
+        .test-card h3 {
+            color: #007bff;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .test-card p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,123,255,0.4);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+        }
+        
+        .btn-success {
+            background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+        }
+        
+        .btn-warning {
+            background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);
+        }
+        
+        .navigation {
+            background: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        @media (max-width: 768px) {
+            .test-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        
+        .status-success {
+            background-color: #28a745;
+        }
+        
+        .status-warning {
+            background-color: #ffc107;
+        }
+        
+        .status-info {
+            background-color: #17a2b8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧪 Test Center</h1>
+            <p>Verifikasi Penyimpanan Text Murni - Manajemen Kontak</p>
+        </div>
+        
+        <div class="content">
+            <div class="test-grid">
+                <div class="test-card">
+                    <h3><span class="status-indicator status-info"></span>🔧 Test Storage System</h3>
+                    <p>Uji kemampuan sistem untuk menulis dan membaca file text murni (TXT, JSON, CSV).</p>
+                    <a href="test-storage.php" class="btn" target="_blank">Jalankan Test Storage</a>
+                </div>
+                
+                <div class="test-card">
+                    <h3><span class="status-indicator status-success"></span>📝 Form Input Sederhana</h3>
+                    <p>Form input dengan validasi minimal - coba tambah kontak baru dan lihat data tersimpan.</p>
+                    <a href="add-contact-simple.html" class="btn btn-success">Buka Form Sederhana</a>
+                </div>
+                
+                <div class="test-card">
+                    <h3><span class="status-indicator status-info"></span>📋 Lihat Data Tersimpan</h3>
+                    <p>Tampilkan semua data kontak yang tersimpan dalam file text murni.</p>
+                    <a href="view-contacts-simple.php" class="btn btn-secondary">Lihat Data Simple</a>
+                </div>
+                
+                <div class="test-card">
+                    <h3><span class="status-indicator status-warning"></span>📁 Raw Data Files</h3>
+                    <p>Akses langsung ke file-file data mentah yang tersimpan dalam folder data/.</p>
+                    <a href="check-files.php" class="btn btn-warning">Cek File Data</a>
+                </div>
+                
+                <div class="test-card">
+                    <h3><span class="status-indicator status-success"></span>🚀 Aplikasi Lengkap</h3>
+                    <p>Versi lengkap aplikasi manajemen kontak dengan fitur multimedia.</p>
+                    <a href="index.html" class="btn">Buka Aplikasi Lengkap</a>
+                </div>
+                
+                <div class="test-card">
+                    <h3><span class="status-indicator status-info"></span>📊 Lihat Data Lengkap</h3>
+                    <p>Tampilan data kontak versi lengkap dengan detail dan fitur pencarian.</p>
+                    <a href="view-contacts.php" class="btn btn-secondary">Data Lengkap</a>
+                </div>
+            </div>
+            
+            <div style="background: #e7f3ff; border: 1px solid #b3d9ff; border-radius: 8px; padding: 1.5rem; margin: 2rem 0;">
+                <h3 style="color: #0066cc; margin-bottom: 1rem;">🎯 Cara Memverifikasi Penyimpanan Text Murni:</h3>
+                <ol style="color: #333; line-height: 1.8;">
+                    <li><strong>Jalankan Test Storage</strong> - Pastikan semua test menunjukkan ✅</li>
+                    <li><strong>Isi Form Sederhana</strong> - Tambah 1-2 kontak untuk test</li>
+                    <li><strong>Cek File Data</strong> - Lihat file mentah yang tersimpan</li>
+                    <li><strong>Lihat Data Tersimpan</strong> - Verifikasi data tampil di web</li>
+                    <li><strong>Test Aplikasi Lengkap</strong> - Coba fitur multimedia</li>
+                </ol>
+            </div>
+            
+            <div style="background: #f8f9fa; border-radius: 8px; padding: 1.5rem;">
+                <h4 style="color: #495057; margin-bottom: 1rem;">📍 Lokasi File Data:</h4>
+                <ul style="color: #666; line-height: 1.8;">
+                    <li><code>data/contacts.txt</code> - Format JSON (mudah dibaca)</li>
+                    <li><code>data/contacts_plain.txt</code> - Format text biasa</li>
+                    <li><code>data/contacts.csv</code> - Format CSV (bisa dibuka Excel)</li>
+                    <li><code>data/activity.log</code> - Log aktivitas aplikasi</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="navigation">
+            <div class="nav-links">
+                <a href="index.html" class="btn">🏠 Beranda</a>
+                <a href="about.html" class="btn btn-secondary">ℹ️ Tentang</a>
+                <a href="README.md" class="btn btn-secondary" target="_blank">📖 Dokumentasi</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Kontak - Sistem Manajemen Kontak</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header dengan Navigasi -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <i class="fas fa-address-book"></i>
+                <span>Kontak Manager</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="add-contact.html" class="active"><i class="fas fa-plus"></i> Tambah Kontak</a></li>
+                <li><a href="view-contacts.php"><i class="fas fa-list"></i> Lihat Kontak</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> Tentang</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Form Container -->
+    <div class="form-container">
+        <h1><i class="fas fa-user-plus"></i> Tambah Kontak Baru</h1>
+        
+        <form id="contactForm" action="save-contact.php" method="POST" enctype="multipart/form-data">
+            <!-- Informasi Dasar -->
+            <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Nama Lengkap *</label>
+                <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email *</label>
+                <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone"><i class="fas fa-phone"></i> Nomor Telepon *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+62 812 3456 7890" 
+                       oninput="formatPhoneNumber(this)" required>
+            </div>
+
+            <!-- Kategori Kontak (Radio Button) -->
+            <div class="form-group">
+                <label><i class="fas fa-tags"></i> Kategori Kontak *</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="family" name="category" value="Keluarga" required>
+                        <label for="family">👨‍👩‍👧‍👦 Keluarga</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="friend" name="category" value="Teman" required>
+                        <label for="friend">👥 Teman</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="work" name="category" value="Kerja" required>
+                        <label for="work">💼 Kerja</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="business" name="category" value="Bisnis" required>
+                        <label for="business">🏢 Bisnis</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="other" name="category" value="Lainnya" required>
+                        <label for="other">📝 Lainnya</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prioritas (Select) -->
+            <div class="form-group">
+                <label for="priority"><i class="fas fa-star"></i> Tingkat Prioritas</label>
+                <select id="priority" name="priority">
+                    <option value="">-- Pilih Prioritas --</option>
+                    <option value="Tinggi">🔴 Tinggi</option>
+                    <option value="Sedang">🟡 Sedang</option>
+                    <option value="Rendah">🟢 Rendah</option>
+                </select>
+            </div>
+
+            <!-- Alamat -->
+            <div class="form-group">
+                <label for="address"><i class="fas fa-map-marker-alt"></i> Alamat</label>
+                <textarea id="address" name="address" rows="3" placeholder="Masukkan alamat lengkap..." 
+                         oninput="autoResize(this)"></textarea>
+            </div>
+
+            <!-- Tanggal Lahir -->
+            <div class="form-group">
+                <label for="birthday"><i class="fas fa-birthday-cake"></i> Tanggal Lahir</label>
+                <input type="date" id="birthday" name="birthday">
+            </div>
+
+            <!-- Website/Social Media -->
+            <div class="form-group">
+                <label for="website"><i class="fas fa-globe"></i> Website/Social Media</label>
+                <input type="url" id="website" name="website" placeholder="https://example.com">
+            </div>
+
+            <!-- Upload Foto -->
+            <div class="form-group">
+                <label for="photo"><i class="fas fa-camera"></i> Foto Profil</label>
+                <input type="file" id="photo" name="photo" accept="image/*">
+                <small style="color: #666; font-size: 0.9rem;">Format yang didukung: JPG, PNG, GIF (Max 5MB)</small>
+            </div>
+
+            <!-- Catatan -->
+            <div class="form-group">
+                <label for="notes"><i class="fas fa-sticky-note"></i> Catatan</label>
+                <textarea id="notes" name="notes" rows="4" placeholder="Tambahkan catatan khusus tentang kontak ini..." 
+                         oninput="autoResize(this)"></textarea>
+            </div>
+
+            <!-- Buttons -->
+            <div class="form-group" style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-save"></i> Simpan Kontak
+                </button>
+                <button type="reset" class="btn btn-secondary">
+                    <i class="fas fa-undo"></i> Reset Form
+                </button>
+                <a href="view-contacts.php" class="btn btn-secondary">
+                    <i class="fas fa-list"></i> Lihat Semua Kontak
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <!-- Video Background (Optional) -->
+    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+        <video width="200" height="150" autoplay muted loop style="border-radius: 10px; opacity: 0.8;">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+            Browser Anda tidak mendukung video HTML5.
+        </video>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sistem Manajemen Kontak. Dibuat dengan <i class="fas fa-heart"></i> untuk kemudahan Anda.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Additional form-specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Preview foto yang diupload
+            const photoInput = document.getElementById('photo');
+            photoInput.addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        // Buat preview image
+                        let preview = document.getElementById('photo-preview');
+                        if (!preview) {
+                            preview = document.createElement('img');
+                            preview.id = 'photo-preview';
+                            preview.style.cssText = 'max-width: 200px; max-height: 200px; margin-top: 10px; border-radius: 10px; border: 2px solid #ddd;';
+                            photoInput.parentNode.appendChild(preview);
+                        }
+                        preview.src = e.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            // Auto-fill tanggal hari ini untuk kontak baru
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('birthday').max = today;
+
+            // Konfirmasi reset form
+            const resetBtn = document.querySelector('button[type="reset"]');
+            resetBtn.addEventListener('click', function(e) {
+                if (!confirm('Apakah Anda yakin ingin menghapus semua data yang telah diisi?')) {
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

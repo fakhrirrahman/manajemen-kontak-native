@@ -1,0 +1,36 @@
+
+================================================================================
+{
+    "id": "CONTACT_1750962674_685d91f2b66bf",
+    "name": "Bree Burks",
+    "email": "gikuqyd@mailinator.com",
+    "phone": "12582755332",
+    "category": "Teman",
+    "priority": "Sedang",
+    "address": "Voluptas a et aperia",
+    "birthday": "2009-04-16",
+    "website": "https:\/\/www.kywohisirexuj.mobi",
+    "photo": "uploads\/photos\/photo_1750962674_685d91f2b65b6.png",
+    "notes": "Qui est quia cupidi",
+    "date_created": "2025-06-27 01:31:14",
+    "date_modified": "2025-06-27 01:31:14"
+}
+================================================================================
+
+================================================================================
+{
+    "id": "TEST_1750962864",
+    "name": "John Doe Test",
+    "email": "john@test.com",
+    "phone": "+62812345678",
+    "category": "Teman",
+    "priority": "Tinggi",
+    "address": "Jl. Test No. 123",
+    "birthday": "1990-01-01",
+    "website": "https:\/\/test.com",
+    "photo": "",
+    "notes": "Ini adalah data test untuk memastikan penyimpanan text murni bekerja",
+    "date_created": "2025-06-27 01:34:24",
+    "date_modified": "2025-06-27 01:34:24"
+}
+================================================================================
